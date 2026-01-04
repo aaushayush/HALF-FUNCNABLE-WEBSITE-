@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharatonic Industries - You Dream It We Build It</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hidden { display: none; }
+        .gradient-bg { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="gradient-bg shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-4">
+                    <div class="w-14 h-14 bg-white rounded-full p-2 shadow-md">
+                        <svg viewBox="0 0 100 100">
+                            <text x="50" y="60" font-size="50" fill="#d97706" text-anchor="middle" font-weight="bold">B</text>
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#d97706" stroke-width="2" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-white">Bharatonic Industries</h1>
+                        <p class="text-amber-100 text-sm italic">You Dream It, We Build It</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#" onclick="showPage('home'); return false;" class="text-white hover:text-amber-200">Home</a>
+                    <a href="#" onclick="showPage('services'); return false;" class="text-white hover:text-amber-200">Services</a>
+                    <a href="#" onclick="showPage('about'); return false;" class="text-white hover:text-amber-200">About</a>
+                    <a href="#" onclick="showPage('contact'); return false;" class="text-white hover:text-amber-200">Contact</a>
+                    <button onclick="showLoginModal()" class="bg-white text-amber-700 px-6 py-2 rounded-full font-semibold hover:bg-amber-50">Login</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="homePage">
+        <div class="bg-gradient-to-br from-amber-50 to-orange-50 py-20">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-5xl font-bold text-gray-800 mb-6">Building Dreams,<br/>Creating Futures</h2>
+                        <p class="text-xl text-gray-600 mb-8">Connecting skilled workers with quality construction projects. Professional, reliable, and transparent.</p>
+                        <div class="flex space-x-4">
+                            <button onclick="showPage('services')" class="bg-amber-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-amber-700">Explore Services</button>
+                            <button onclick="showLoginModal()" class="border-2 border-amber-600 text-amber-600 px-8 py-3 rounded-full font-semibold hover:bg-amber-50">Get Started</button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-2xl">
+                        <div class="bg-amber-100 h-64 rounded-lg mb-4 flex items-center justify-center">
+                            <span class="text-amber-700 text-2xl font-bold">Construction Site</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div class="bg-amber-50 p-4 rounded-lg">
+                                <p class="text-3xl font-bold text-amber-600">500+</p>
+                                <p class="text-gray-600 text-sm">Workers</p>
+                            </div>
+                            <div class="bg-amber-50 p-4 rounded-lg">
+                                <p class="text-3xl font-bold text-amber-600">200+</p>
+                                <p class="text-gray-600 text-sm">Projects</p>
+                            </div>
+                            <div class="bg-amber-50 p-4 rounded-lg">
+                                <p class="text-3xl font-bold text-amber-600">98%</p>
+                                <p class="text-gray-600 text-sm">Satisfaction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <h3 class="text-3xl font-bold text-center mb-12">Our Stakeholders</h3>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-3xl">👷</span>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2 text-center">Workers</h4>
+                        <p class="text-gray-600 text-center">Skilled laborers with verified profiles</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                        <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-3xl">💼</span>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2 text-center">Contractors</h4>
+                        <p class="text-gray-600 text-center">Manage multiple sites efficiently</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                        <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-3xl">🏠</span>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2 text-center">Homeowners</h4>
+                        <p class="text-gray-600 text-center">Track your project real-time</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                        <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-3xl">✅</span>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2 text-center">Supervisors</h4>
+                        <p class="text-gray-600 text-center">Quality assurance on-ground</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Page -->
+    <div id="servicesPage" class="hidden">
+        <div class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-4">Our Services</h2>
+                <p class="text-center text-gray-600 mb-12">Comprehensive construction and workforce management solutions</p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4 text-amber-600">Worker Management</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>✓ Digital ID cards and certifications</li>
+                            <li>✓ GPS-based attendance tracking</li>
+                            <li>✓ Automated salary and PF/ESI management</li>
+                            <li>✓ Skills training programs</li>
+                            <li>✓ Performance ratings system</li>
+                        </ul>
+                        <button onclick="showLoginModal()" class="mt-6 bg-amber-600 text-white px-6 py-2 rounded-full hover:bg-amber-700 w-full">Get Started</button>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4 text-amber-600">Contractor Solutions</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>✓ Multi-site project management</li>
+                            <li>✓ Automated worker allocation</li>
+                            <li>✓ Budget tracking and analytics</li>
+                            <li>✓ Performance reports</li>
+                            <li>✓ Invoice generation</li>
+                        </ul>
+                        <button onclick="showLoginModal()" class="mt-6 bg-amber-600 text-white px-6 py-2 rounded-full hover:bg-amber-700 w-full">Get Started</button>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4 text-amber-600">Homeowner Portal</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>✓ Live project timeline</li>
+                            <li>✓ Daily progress updates with photos</li>
+                            <li>✓ Verified worker profiles</li>
+                            <li>✓ Payment milestone tracking</li>
+                            <li>✓ Direct communication</li>
+                        </ul>
+                        <button onclick="showLoginModal()" class="mt-6 bg-amber-600 text-white px-6 py-2 rounded-full hover:bg-amber-700 w-full">Get Started</button>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4 text-amber-600">Site Supervision</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>✓ GPS-verified attendance</li>
+                            <li>✓ Safety compliance monitoring</li>
+                            <li>✓ Material tracking and alerts</li>
+                            <li>✓ Daily work progress reports</li>
+                            <li>✓ Incident reporting</li>
+                        </ul>
+                        <button onclick="showLoginModal()" class="mt-6 bg-amber-600 text-white px-6 py-2 rounded-full hover:bg-amber-700 w-full">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="aboutPage" class="hidden">
+        <div class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-4">About Bharatonic Industries</h2>
+                <p class="text-center text-gray-600 mb-12 text-lg">Building a better future for construction workers and contractors</p>
+                <div class="bg-amber-50 p-8 rounded-xl mb-8">
+                    <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+                    <p class="text-gray-700 text-lg">Bharatonic Industries is dedicated to revolutionizing the construction industry by providing a comprehensive platform that connects skilled workers with quality projects while ensuring fair wages, safety, and professional growth.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-amber-600 mb-2">500+</div>
+                        <p class="text-gray-600">Verified Workers</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-amber-600 mb-2">200+</div>
+                        <p class="text-gray-600">Completed Projects</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-amber-600 mb-2">98%</div>
+                        <p class="text-gray-600">Client Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contactPage" class="hidden">
+        <div class="py-16 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-4">Contact Us</h2>
+                <p class="text-center text-gray-600 mb-12">Get in touch with Bharatonic Industries</p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6">Send us a message</h3>
+                        <div class="space-y-4">
+                            <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-lg">
+                            <input type="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded-lg">
+                            <input type="tel" placeholder="Your Phone" class="w-full p-3 border border-gray-300 rounded-lg">
+                            <textarea placeholder="Your Message" rows="4" class="w-full p-3 border border-gray-300 rounded-lg"></textarea>
+                            <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-semibold hover:bg-amber-700">Send Message</button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="font-bold">📞 Phone</p>
+                                <p class="text-gray-600">+91 98765 43210</p>
+                            </div>
+                            <div>
+                                <p class="font-bold">✉️ Email</p>
+                                <p class="text-gray-600">info@bharatonic.com</p>
+                            </div>
+                            <div>
+                                <p class="font-bold">📍 Address</p>
+                                <p class="text-gray-600">Narnaund, Haryana, India - 126152</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold">Login Portal</h3>
+                <button onclick="closeLoginModal()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+            </div>
+            <div class="space-y-3">
+                <button onclick="showDashboard('worker')" class="w-full bg-blue-50 border-2 border-blue-200 p-4 rounded-lg hover:bg-blue-100 text-left">
+                    <p class="font-bold">👷 Worker</p>
+                    <p class="text-sm text-gray-600">Access your profile and jobs</p>
+                </button>
+                <button onclick="showDashboard('contractor')" class="w-full bg-green-50 border-2 border-green-200 p-4 rounded-lg hover:bg-green-100 text-left">
+                    <p class="font-bold">💼 Contractor</p>
+                    <p class="text-sm text-gray-600">Manage sites and workers</p>
+                </button>
+                <button onclick="showDashboard('homeowner')" class="w-full bg-purple-50 border-2 border-purple-200 p-4 rounded-lg hover:bg-purple-100 text-left">
+                    <p class="font-bold">🏠 Homeowner</p>
+                    <p class="text-sm text-gray-600">Track your project</p>
+                </button>
+                <button onclick="showDashboard('admin')" class="w-full bg-red-50 border-2 border-red-200 p-4 rounded-lg hover:bg-red-100 text-left">
+                    <p class="font-bold">⚙️ Admin</p>
+                    <p class="text-sm text-gray-600">System management</p>
+                </button>
+            </div>
+            <p class="text-center text-sm text-gray-500 mt-4">Demo Mode - Select any role</p>
+        </div>
+    </div>
+
+    <!-- Worker Dashboard -->
+    <div id="workerDashboard" class="hidden min-h-screen bg-gray-50 py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-6 flex justify-between items-center">
+                <div>
+                    <h2 class="text-2xl font-bold">👷 Worker Dashboard</h2>
+                    <p class="text-gray-600">Welcome, Rajesh Kumar</p>
+                </div>
+                <button onclick="logout()" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">Logout</button>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 mb-6">
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <h3 class="text-gray-600 mb-2">Status</h3>
+                    <p class="text-3xl font-bold text-green-600">Available</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <h3 class="text-gray-600 mb-2">This Month</h3>
+                    <p class="text-3xl font-bold">₹22,500</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <h3 class="text-gray-600 mb-2">Rating</h3>
+                    <p class="text-3xl font-bold">⭐ 4.5/5</p>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <h3 class="text-xl font-bold mb-4">Available Jobs</h3>
+                    <div class="space-y-4">
+                        <div class="border p-4 rounded-lg">
+                            <h4 class="font-bold">Villa Construction - Sector 45</h4>
+                            <p class="text-sm text-gray-600">Required: 5 Masons | Duration: 15 days</p>
+                            <button class="mt-2 bg-amber-600 text-white px-4 py-2 rounded-full text-sm hover:bg-amber-700">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <h3 class="text-xl font-bold mb-4">Attendance History</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between border-b pb-2">
+                            <span>Jan 3</span>
+                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Present</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span>Jan 2</span>
+                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Present</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contractor Dashboard -->
+    <div id="contractorDashboard" class="hidden min-h-screen bg-gray-50 py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-6 flex justify-between items-center">
+                <div>
+                    <h2 class="text-2xl font-bold">💼 Contractor Dashboard</h2>
+                    <p class="text-gray-600">ABC Builders</p>
+                </div>
+                <button onclick="logout()" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">Logout</button>
+            </div>
+            <div class="grid md:grid-cols-4 gap-6 mb-6">
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <h3 class="text-gray-600 mb-2">Active Sites</h3>
+                    <p class="text-3xl font-bold text-blue-600">5</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <h3 class="text-gray-600 mb-2">Total Workers</h3>
+                    <p class="text-3xl font-bold text-green-600">42</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <h3 class="text-gray-600 mb-2">Revenue (MTD)</h3>
+                    <p class="text-3xl font-bold text-amber-600">₹8.5L</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <h3 class="text-gray-600 mb-2">Pending</h3>
+                    <p class="text-3xl font-bold text-red-600">3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Homeowner Dashboard -->
+    <div id="homeownerDashboard" class="hidden min-h-screen bg-gray-50 py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-6 flex justify-between items-center">
+                <div>
+                    <h2 class="text-2xl font-bold">🏠 Homeowner Dashboard</h2>
+                    <p class="text-gray-600">Villa Construction Project</p>
+                </div>
+                <button onclick="logout()" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">Logout</button>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 mb-6">
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <h3 class="text-gray-600 mb-2">Project Progress</h3>
+                    <p class="text-3xl font-bold text-blue-600">65%</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <h3 class="text-gray-600 mb-2">Budget Used</h3>
+                    <p class="text-3xl font-bold text-amber-600">₹4.2L / ₹6L</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <h3 class="text-gray-600 mb-2">Days Left</h3>
+                    <p class="text-3xl font-bold text-green-600">18</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="adminDashboard" class="hidden min-h-screen bg-gray-50 py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-6 flex justify-between items-center">
+                <div>
+                    <h2 class="text-2xl font-bold">⚙️ Admin Control Panel</h2>
+                    <p class="text-gray-600">Bharatonic Management</p>
+                </div>
+                <button onclick="logout()" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">Logout</button>
+            </div>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <h3 class="text-gray-600 mb-2">Total Workers</h3>
+                    <p class="text-3xl font-bold text-blue-600">524</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <h3 class="text-gray-600 mb-2">Contractors</h3>
+                    <p class="text-3xl font-bold text-green-600">48</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <h3 class="text-gray-600 mb-2">Revenue (MTD)</h3>
+                    <p class="text-3xl font-bold text-amber-600">₹24.8L</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <h3 class="text-gray-600 mb-2">Projects</h3>
+                    <p class="text-3xl font-bold text-purple-600">127</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h4 class="text-xl font-bold mb-4">Bharatonic Industries</h4>
+            <p class="text-gray-400 mb-4">You Dream It, We Build It</p>
+            <p class="text-gray-400">&copy; 2026 Bharatonic Industries. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showPage(page) {
+            document.querySelectorAll('.page, #homePage, #servicesPage, #aboutPage, #contactPage').forEach(el => el.classList.add('hidden'));
+            document.getElementById(page + 'Page').classList.remove('hidden');
+        }
+
+        function showLoginModal() {
+            document.getElementById('loginModal').classList.remove('hidden');
+        }
+
+        function closeLoginModal() {
+            document.getElementById('loginModal').classList.add('hidden');
+        }
+
+        function showDashboard(role) {
+            document.querySelectorAll('.page, #homePage, #servicesPage, #aboutPage, #contactPage').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('[id$="Dashboard"]').forEach(el => el.classList.add('hidden'));
+            document.querySelector('nav').classList.add('hidden');
+            document.querySelector('footer').classList.add('hidden');
+            document.getElementById(role + 'Dashboard').classList.remove('hidden');
+            closeLoginModal();
+        }
+
+        function logout() {
+            document.querySelectorAll('[id$="Dashboard"]').forEach(el => el.classList.add('hidden'));
+            document.querySelector('nav').classList.remove('hidden');
+            document.querySelector('footer').classList.remove('hidden');
+            document.getElementById('homePage').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
